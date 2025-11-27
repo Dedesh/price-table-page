@@ -1,0 +1,182 @@
+body {
+    font-family: kedebideri, sans-serif;
+    background-color: rgb(255, 255, 241);
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3%;
+}
+
+.card {
+    min-height: 350px;
+    min-width: 200px;
+    flex-basis: 30vh;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.15s;
+}
+
+.card-1 > .card-top-part, .card-1 button {
+    background-image: linear-gradient(135deg, rgb(255, 143, 63), rgb(255, 0, 0));
+}
+
+.card-1 .circle {
+    background-image:
+        url("./assets/images/check-img.png"),
+        linear-gradient(135deg, rgb(255, 143, 63), rgb(255, 0, 0));
+}
+
+.card-2 > .card-top-part, .card-2 button {
+    background: linear-gradient(135deg, rgb(117, 162, 199), rgb(0, 72, 255));
+}
+
+.card-2 .circle {
+    background-image:
+        url("./assets/images/check-img.png"),
+        linear-gradient(135deg, rgb(117, 162, 199), rgb(0, 72, 255));
+}
+
+.card-3 > .card-top-part, .card-3 button {
+    background: linear-gradient(135deg, rgba(84, 188, 183, 0.575), rgb(19, 111, 131));
+}
+
+.card-3 .circle {
+    background-image:
+        url("./assets/images/check-img.png"),
+        linear-gradient(135deg, rgba(84, 188, 183, 0.575), rgb(19, 111, 131));
+}
+
+.card-bottom-part {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.card-top-part > p {
+    color: white;
+    text-align: center;
+}
+
+.features {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.features > div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+}
+
+.card-bottom-part > .features > div > p {
+    color: rgb(71, 71, 71);
+    text-align: left;
+}
+
+.title-text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 2px;
+}
+
+.card-top-part > hr {
+    margin: 2px auto;
+    width: 80%;
+    border: none;
+    background-color: white;
+}
+
+.card-top-part .normal-text {
+    font-size: .6rem;
+    padding: 8px;
+    padding-bottom: 15px;
+}
+
+.card-bottom-part .normal-text {
+    font-size: .6rem;
+    padding: 8px 0px 8px 8px;
+}
+
+.price-text {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    margin-left: 10px;
+}
+
+.dollar {
+    font-size: 2.5rem;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.per-month {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-bottom-part > hr {
+    margin: auto;
+    width: 30%;
+    border: none;
+    background-color: lightgray;
+}
+
+button {
+    border: none;
+    padding: 7px 14px;
+    border-radius: 14px;
+    display: block;
+    margin: 5px auto;
+    font-family: kedebideri, sans-serif;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+button:hover {
+    filter: brightness(1.5);
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25vh;
+    }
+
+    .card {
+        min-width: 275px;
+        max-width: 275px;
+        min-height: 475px;
+    }
+}
